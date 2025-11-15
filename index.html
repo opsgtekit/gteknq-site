@@ -80,12 +80,12 @@
       gap: 0.6rem;
     }
 
-    /* === REAL LOGO INSTALLED HERE === */
     .brand-logo {
-      height: 42px;
-      width: auto;
-      display: block;
-      object-fit: contain;
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #ffffff, #4fd3ff 30%, #004d88 100%);
+      box-shadow: 0 0 18px rgba(47, 180, 255, 0.65);
     }
 
     .brand-text {
@@ -162,23 +162,604 @@
       padding: 2.2rem 1.25rem;
     }
 
+    .hero {
+      padding-top: 3.1rem;
+      padding-bottom: 3.1rem;
+      display: grid;
+      grid-template-columns: minmax(0, 3.2fr) minmax(0, 2.3fr);
+      gap: 2.8rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15, 151, 255, 0.18);
+      color: var(--accent);
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 10px rgba(47, 180, 255, 0.9);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 3vw + 1.6rem, 3.1rem);
+      line-height: 1.03;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(120deg, #2fb4ff, #9ae6ff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.97rem;
+      color: var(--text-muted);
+      max-width: 34rem;
+      margin-bottom: 1.7rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-bottom: 1.9rem;
+    }
+
+    .badge {
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(6, 9, 18, 0.9);
+      color: var(--text-muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, #2fb4ff, #4fe0ff);
+      color: #020308;
+      font-size: 0.95rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 14px 30px rgba(47, 180, 255, 0.45);
+    }
+
+    .btn-primary span {
+      font-size: 1.1rem;
+      transform: translateY(1px);
+    }
+
+    .btn-ghost {
+      padding: 0.65rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(6, 9, 18, 0.9);
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .hero-meta {
+      margin-top: 1.4rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .hero-meta strong {
+      color: #d6def5;
+    }
+
+    .hero-visual {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      background: radial-gradient(
+          circle at top left,
+          rgba(47, 180, 255, 0.12),
+          transparent 55%
+        ),
+        radial-gradient(circle at bottom right, #03040a, #020308 60%);
+      padding: 1.1rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-visual-inner {
+      border-radius: calc(var(--radius-xl) - 6px);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      padding: 1.1rem;
+      background: radial-gradient(circle at top, #111827, #05070b 60%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .grid-lines {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(
+          rgba(255, 255, 255, 0.04) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.04) 1px,
+          transparent 1px
+        );
+      background-size: 36px 36px;
+      opacity: 0.35;
+      mask-image: radial-gradient(circle at center, black 0, transparent 75%);
+      pointer-events: none;
+    }
+
+    .hero-kpi-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .kpi-card {
+      flex: 1 1 120px;
+      min-width: 0;
+      padding: 0.8rem 0.9rem;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(3, 6, 18, 0.9);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .kpi-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.4rem;
+    }
+
+    .kpi-value {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+
+    .kpi-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .kpi-pill {
+      position: absolute;
+      bottom: 0.5rem;
+      right: 0.7rem;
+      font-size: 0.7rem;
+      padding: 0.17rem 0.5rem;
+      border-radius: 999px;
+      background: rgba(15, 151, 255, 0.2);
+      color: var(--accent);
+    }
+
+    .diagram {
+      margin-top: 0.6rem;
+      padding: 0.9rem 0.9rem 0.95rem;
+      border-radius: 14px;
+      border: 1px dashed rgba(255, 255, 255, 0.27);
+      background: radial-gradient(circle at center, #070b13, #020308);
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1.1fr;
+      gap: 0.6rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .diagram-col h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #d5e3ff;
+      margin-bottom: 0.35rem;
+    }
+
+    .diagram-col ul {
+      list-style: none;
+    }
+
+    .diagram-col li {
+      margin-bottom: 0.2rem;
+    }
+
+    .diagram-tag {
+      position: absolute;
+      top: 0.55rem;
+      right: 0.65rem;
+      font-size: 0.72rem;
+      padding: 0.1rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 40rem;
+      margin: 0 auto 1.8rem;
+    }
+
+    .section-heading h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-heading p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 0.7rem;
+    }
+
+    .pill-row span {
+      font-size: 0.72rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+    }
+
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: linear-gradient(
+        145deg,
+        rgba(19, 26, 40, 0.96),
+        rgba(4, 8, 18, 0.97)
+      );
+      padding: 1rem;
+    }
+
+    .card h3 {
+      font-size: 0.98rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .card small {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 0.3rem;
+    }
+
+    .card p {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .card ul {
+      list-style: none;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .card ul li::before {
+      content: "•";
+      margin-right: 0.4rem;
+      color: var(--accent);
+    }
+
+    .metrics-band {
+      margin-top: 2.1rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: radial-gradient(
+        circle at left,
+        rgba(47, 180, 255, 0.18),
+        rgba(4, 7, 16, 0.95)
+      );
+      padding: 0.9rem 1.1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.4rem;
+      align-items: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .metrics-band strong {
+      color: #e8f1ff;
+    }
+
+    .metrics-band-item {
+      min-width: 140px;
+    }
+
+    .metrics-band-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: rgba(224, 235, 255, 0.75);
+      margin-bottom: 0.15rem;
+    }
+
+    .metrics-band-value {
+      font-size: 0.98rem;
+      font-weight: 600;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 2fr);
+      gap: 1.5rem;
+      align-items: flex-start;
+      margin-top: 0.6rem;
+    }
+
+    .list {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .list h3 {
+      font-size: 0.98rem;
+      margin-bottom: 0.35rem;
+      color: #e1e8ff;
+    }
+
+    .list ul {
+      list-style: none;
+    }
+
+    .list li {
+      margin-bottom: 0.25rem;
+    }
+
+    .list li::before {
+      content: "—";
+      margin-right: 0.4rem;
+      color: var(--accent);
+    }
+
+    .panel {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: radial-gradient(circle at top, #101624, #05060b);
+      padding: 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .panel h3 {
+      font-size: 0.98rem;
+      margin-bottom: 0.4rem;
+      color: #e1e8ff;
+    }
+
+    .panel-tag {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+      display: inline-block;
+    }
+
+    .panel-rows {
+      margin-top: 0.4rem;
+      display: grid;
+      gap: 0.2rem;
+    }
+
+    .panel-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+    }
+
+    .panel-row span:first-child {
+      color: var(--text-muted);
+    }
+
+    .panel-row span:last-child {
+      color: #e1e8ff;
+    }
+
+    .contact {
+      margin-top: 2.3rem;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      background: radial-gradient(
+        circle at right,
+        rgba(47, 180, 255, 0.16),
+        rgba(3, 5, 12, 0.98)
+      );
+      padding: 1.4rem 1.2rem;
+      display: grid;
+      grid-template-columns: minmax(0, 2.4fr) minmax(0, 2fr);
+      gap: 1.2rem;
+      align-items: center;
+    }
+
+    .contact h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .contact p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      max-width: 26rem;
+    }
+
+    .contact-meta {
+      margin-top: 0.6rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 0.7rem;
+      font-size: 0.84rem;
+    }
+
+    .field {
+      display: grid;
+      gap: 0.2rem;
+    }
+
+    .field label {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .field input,
+    .field textarea {
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(3, 5, 12, 0.96);
+      padding: 0.55rem 0.7rem;
+      color: var(--text);
+      font: inherit;
+      resize: vertical;
+      min-height: 36px;
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: rgba(165, 175, 199, 0.6);
+    }
+
+    .contact-submit {
+      justify-self: flex-start;
+      margin-top: 0.2rem;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      margin-top: 2.6rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.2rem 1.25rem 1.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.7rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      opacity: 0.8;
+    }
+
+    .footer-links a:hover {
+      opacity: 1;
+    }
+
+    @media (max-width: 840px) {
+      .hero,
+      .contact,
+      .two-col,
+      .three-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        padding-top: 2.2rem;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-badges,
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .metrics-band {
+        flex-direction: column;
+      }
+
+      .diagram {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
   </style>
 </head>
 <body>
   <div class="page">
-
     <header>
       <div class="nav">
         <a href="#top" class="brand">
-          <!-- REAL LOGO INSERTED -->
-          <img src="images/logo.png" alt="GTek NQ Logo" class="brand-logo" />
-
+          <div class="brand-logo"></div>
           <div class="brand-text">
             <span>Trading Infrastructure</span>
             <span>GTek NQ</span>
           </div>
         </a>
-
         <nav class="nav-links">
           <a href="#services">Services</a>
           <a href="#operators">Who we help</a>
@@ -191,10 +772,327 @@
       </div>
     </header>
 
-    <!-- The rest of your (long) site HTML goes below -->
-    <!-- I did not rewrite the rest here to avoid flooding the chat -->
-    <!-- Your next message can say “continue” and I’ll output from this point onward -->
-    
+    <main id="top">
+      <!-- HERO -->
+      <section class="section hero">
+        <div>
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Trading infra, consulting & dev</span>
+          </div>
+          <h1>
+            Infrastructure and software for
+            <span>operators who trade for real.</span>
+          </h1>
+          <p class="hero-subtitle">
+            GTek NQ designs, hardens, and builds the stack behind your trading:
+            low-latency infra, execution workflows, and custom tools that don’t
+            fall apart when the market gets busy.
+          </p>
+
+          <div class="hero-badges">
+            <span class="badge">Trading infrastructure design</span>
+            <span class="badge">Strategy-aligned consulting</span>
+            <span class="badge">Custom dev & automation</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary">
+              Schedule a trading stack review
+              <span>➝</span>
+            </a>
+            <a href="#services" class="btn-ghost">
+              View services
+            </a>
+          </div>
+
+          <p class="hero-meta">
+            <strong>Typical clients:</strong> systematic and discretionary traders,
+            small funds, and digital operators who can’t afford downtime.
+          </p>
+        </div>
+
+        <aside class="hero-visual" aria-hidden="true">
+          <div class="hero-visual-inner">
+            <div class="grid-lines"></div>
+            <div class="hero-kpi-row">
+              <div class="kpi-card">
+                <div class="kpi-label">Trading Uptime Target</div>
+                <div class="kpi-value">99.9%+</div>
+                <div class="kpi-sub">For core execution & data paths.</div>
+                <div class="kpi-pill">Live</div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-label">Incident Window</div>
+                <div class="kpi-value">&lt; 1 hr</div>
+                <div class="kpi-sub">Defined classes with clear runbooks.</div>
+                <div class="kpi-pill">Ops</div>
+              </div>
+            </div>
+
+            <div class="diagram">
+              <div class="diagram-tag">Trading Stack Blueprint</div>
+              <div class="diagram-col">
+                <h4>Execution</h4>
+                <ul>
+                  <li>Terminals & blotters</li>
+                  <li>Broker / exchange links</li>
+                  <li>APIs & routing rules</li>
+                </ul>
+              </div>
+              <div class="diagram-col">
+                <h4>Core Infra</h4>
+                <ul>
+                  <li>Low-latency servers & VMs</li>
+                  <li>Secure DNS & networking</li>
+                  <li>Identity & access control</li>
+                </ul>
+              </div>
+              <div class="diagram-col">
+                <h4>Dev & Guard</h4>
+                <ul>
+                  <li>Custom tools & automation</li>
+                  <li>Monitoring & logs wired right</li>
+                  <li>Playbooks tied to risk</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section">
+        <div class="section-heading">
+          <h2>What we actually do</h2>
+          <p>
+            A focused set of services around trading infrastructure and custom
+            development. No generic “digital transformation” fluff — just the
+            pieces that keep your trading stack honest.
+          </p>
+          <div class="pill-row">
+            <span>Trading infra architecture</span>
+            <span>Strategy-aware consulting</span>
+            <span>Custom dev & automation</span>
+          </div>
+        </div>
+
+        <div class="three-col">
+          <article class="card">
+            <small>01 — Trading Infrastructure</small>
+            <h3>Design & build the stack around your edge</h3>
+            <p>
+              From retail-plus to fund-grade: design and implement infra that
+              matches how and where you actually trade.
+            </p>
+            <ul>
+              <li>Cloud, colocated & hybrid layouts</li>
+              <li>Low-latency routes for data & execution</li>
+              <li>Resilient DNS, routing, and failover</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <small>02 — Consulting & Hardening</small>
+            <h3>Clean up risk you don’t get paid for</h3>
+            <p>
+              Identify the weak links in your current setup and lock down the
+              things that can kill a session in one bad spike.
+            </p>
+            <ul>
+              <li>Risk review of current trading stack</li>
+              <li>Hardening of access, keys, and config</li>
+              <li>Runbooks for “this just broke” moments</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <small>03 — Development & Tools</small>
+            <h3>Custom software that matches your workflow</h3>
+            <p>
+              Build the glue: dashboards, automations, and tools that sit on
+              top of your infra and actually get used.
+            </p>
+            <ul>
+              <li>Internal dashboards & control panels</li>
+              <li>Automation around recurring tasks</li>
+              <li>Integrations with brokers, APIs, and data</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="metrics-band">
+          <div class="metrics-band-item">
+            <div class="metrics-band-label">Engagement model</div>
+            <div class="metrics-band-value">Hands-on infra + dev, not slideware</div>
+          </div>
+          <div class="metrics-band-item">
+            <div class="metrics-band-label">Focus</div>
+            <div class="metrics-band-value">Small teams & independent operators</div>
+          </div>
+          <div class="metrics-band-item">
+            <div class="metrics-band-label">Outcome</div>
+            <div class="metrics-band-value">Fewer outages, cleaner execution</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHO WE HELP & WHY -->
+      <section id="operators" class="section">
+        <div class="section-heading">
+          <h2>Who this is for</h2>
+          <p>
+            You already think in risk-reward. The infra and tools behind your
+            trading should behave the same way: predictable, boring, and under
+            control.
+          </p>
+        </div>
+
+        <div class="two-col">
+          <div class="list">
+            <h3>Typical clients</h3>
+            <ul>
+              <li>Independent traders whose stack outgrew retail platforms.</li>
+              <li>Small funds that need discipline without a 20-person IT team.</li>
+              <li>Systematic traders who need infra that respects latency.</li>
+              <li>Digital operators running capital-intensive online workflows.</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <span class="panel-tag">Signals you need GTek NQ</span>
+            <h3>Reality check on your current setup</h3>
+            <div class="panel-rows">
+              <div class="panel-row">
+                <span>During volatility</span>
+                <span>Tools freeze when you need them most</span>
+              </div>
+              <div class="panel-row">
+                <span>Responsibility</span>
+                <span>“It’s the broker” becomes the default answer</span>
+              </div>
+              <div class="panel-row">
+                <span>Changes</span>
+                <span>Every tweak feels risky and undocumented</span>
+              </div>
+              <div class="panel-row">
+                <span>Dev work</span>
+                <span>Ad-hoc scripts instead of owned software</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY GTEK NQ -->
+      <section id="edge" class="section">
+        <div class="section-heading">
+          <h2>Why GTek NQ instead of a generic IT shop?</h2>
+          <p>
+            Because this is built around people who actually trade and operate
+            with risk, not generic corporate “users.” The stack is tuned to your
+            P&L, not a compliance slide.
+          </p>
+        </div>
+
+        <div class="three-col">
+          <article class="card">
+            <small>Operator-first</small>
+            <h3>Trading constraints drive the design</h3>
+            <p>
+              Session times, volatility windows, broker quirks — the real world
+              of how you trade is the input to the architecture.
+            </p>
+          </article>
+
+          <article class="card">
+            <small>Infra + dev under one roof</small>
+            <h3>One place for stack and software</h3>
+            <p>
+              The same team that designs infra can ship the tools on top of it,
+              so nothing gets lost between “IT” and “dev.”
+            </p>
+          </article>
+
+          <article class="card">
+            <small>Clear scope</small>
+            <h3>Defined work, measurable outcomes</h3>
+            <p>
+              Fixed scopes where possible, clear milestones otherwise. You know
+              what we’re touching and how we’ll measure it.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="contact">
+          <div>
+            <h2>Start with a 30-minute trading stack deep dive</h2>
+            <p>
+              We walk through your current setup, pain points, and constraints —
+              infra, tools, and workflows — and outline what a saner, more
+              resilient stack looks like for how you actually trade.
+            </p>
+            <div class="contact-meta">
+              Remote call with screenshare. If you have diagrams, account
+              screenshots, or existing docs, send them ahead of time.
+            </div>
+          </div>
+
+          <form class="contact-form">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" type="text" name="name" placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="you@fund-or-desk.com"
+              />
+            </div>
+            <div class="field">
+              <label for="message">Stack & issues</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="3"
+                placeholder="Platforms, brokers, infra, tools, and what keeps breaking or slowing you down."
+              ></textarea>
+            </div>
+            <!-- Hook this up to your backend or mail handler -->
+            <button type="button" class="btn-primary contact-submit">
+              Email GTek NQ
+              <span>✉</span>
+            </button>
+            <div class="contact-meta">
+              Or email directly:
+              <a href="mailto:info@gteknq.com">info@gteknq.com</a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          © <span id="year"></span> GTek NQ. All rights reserved.
+        </div>
+        <div class="footer-links">
+          <a href="#top">Back to top</a>
+          <a href="mailto:info@gteknq.com">Contact</a>
+        </div>
+      </div>
+    </footer>
   </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
