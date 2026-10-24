@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <title>GTek NQ – Trading Infrastructure, Consulting & Development</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
@@ -86,6 +89,17 @@
       border-radius: 999px;
       background: radial-gradient(circle at 30% 20%, #ffffff, #4fd3ff 30%, #004d88 100%);
       box-shadow: 0 0 18px rgba(47, 180, 255, 0.65);
+    }
+
+    .brand-img {
+      width: 34px;
+      height: 34px;
+      padding: 3px;
+      border-radius: 9px;
+      background: #ffffff;
+      box-shadow: 0 0 16px rgba(47, 180, 255, 0.45);
+      object-fit: contain;
+      display: block;
     }
 
     .brand-text {
@@ -754,7 +768,8 @@
     <header>
       <div class="nav">
         <a href="#top" class="brand">
-          <div class="brand-logo"></div>
+          <img class="brand-img" src="logo-mark.svg" alt="GTek NQ logo"
+            onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'brand-logo'}))" />
           <div class="brand-text">
             <span>Trading Infrastructure</span>
             <span>GTek NQ</span>
